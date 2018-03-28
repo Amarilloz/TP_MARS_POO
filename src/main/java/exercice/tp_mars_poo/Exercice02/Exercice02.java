@@ -27,18 +27,16 @@ public class Exercice02 {
             saisirEntier();
             n = sc.nextInt();
             if (n == 0) {
-
-            }
-
-            System.out.println("");
-
-            for (int i = 0; i < n; i++) {
-                saisirReel();
-                r = r + sc.nextDouble();
+            } else {
                 System.out.println("");
+                for (int i = 0; i < n; i++) {
+                    saisirReel();
+                    r = r + sc.nextDouble();
+                    System.out.println("");
+                }
+                System.out.println("La somme de ces " + n + " nombres réels est : " + r);
+                System.out.println("La moyenne de ces " + n + " nombres réels est : " + r / n);
             }
-            System.out.println("La somme de ces " + n + " nombres réels est : " + r);
-            System.out.println("La moyenne de ces " + n + " nombres réels est : " + r / n);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
