@@ -21,19 +21,23 @@ public class Exercice03 {
     public static void main(String[] args) {
         // TODO code application logic here
         try {
-            switch (typeSapin()) {
-                case 1:
-                    sapinPlein();
-                    break;
-                case 2:
-                    sapinVide();
-                    break;
-                case 3:
-                    sapinCouche();
-                    break;
-                default:
-                    break;
-            }
+            int n = 0;
+            do {
+                n = typeSapin();
+                switch (n) {
+                    case 1:
+                        sapinPlein();
+                        break;
+                    case 2:
+                        sapinVide();
+                        break;
+                    case 3:
+                        sapinCouche();
+                        break;
+                    default:
+                        break;
+                }
+            } while (n != 0);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
@@ -42,10 +46,11 @@ public class Exercice03 {
 
     public static int hauteurSapin() {
         int h = 0;
-        System.out.println("Saisir une hauteur pour le sapin :");
+        System.out.println("\nSaisir une hauteur pour le sapin :");
         while (!sc.hasNextInt()) {
             sc.next();
-            System.out.println("Saisir une hauteur pour le sapin :");
+            System.out.println("Saisie invalide !");
+            System.out.println("\nSaisir une hauteur pour le sapin :");
         }
         h = sc.nextInt();
         return h;
@@ -113,7 +118,7 @@ public class Exercice03 {
                     && typeSapin != 1 && typeSapin != 2 && typeSapin != 3) {
                 System.out.println("Saisie invalide !");
             }
-            System.out.println("Saisir le type de sapin :"
+            System.out.println("\nSaisir le type de sapin :"
                     + "\n\t1 : Plein"
                     + "\n\t2 : Vide"
                     + "\n\t3 : Couché"
@@ -121,7 +126,7 @@ public class Exercice03 {
             while (!sc.hasNextInt()) {
                 sc.next();
                 System.out.println("Saisie invalide !");
-                System.out.println("Saisir le type de sapin :"
+                System.out.println("\nSaisir le type de sapin :"
                         + "\n\t1 : Plein"
                         + "\n\t2 : Vide"
                         + "\n\t3 : Couché"
