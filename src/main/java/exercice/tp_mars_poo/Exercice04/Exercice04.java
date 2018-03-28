@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package exercice.Exercice04;
+package exercice.tp_mars_poo.Exercice04;
 
 import java.util.ArrayList;
 import java.util.List;
