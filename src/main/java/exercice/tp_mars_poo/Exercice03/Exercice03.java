@@ -59,11 +59,11 @@ public class Exercice03 {
     public static void sapinPlein() throws Exception {
         int h = hauteurSapin();
         System.out.println("\nSapin plein de hauteur : " + h + "\n");
-        for (int l = 1; l < h + 1; l++) {
-            for (int espace = 0; espace < h - l; espace++) {
+        for (int i = 1; i < h + 1; i++) {
+            for (int espace = 0; espace < h - i; espace++) {
                 System.out.print(" ");
             }
-            for (int etoile = 0; etoile < 2 * l - 1; etoile++) {
+            for (int etoile = 0; etoile < 2 * i - 1; etoile++) {
                 System.out.print("*");
             }
             System.out.println("");
@@ -73,15 +73,15 @@ public class Exercice03 {
     public static void sapinVide() throws Exception {
         int h = hauteurSapin();
         System.out.println("\nSapin vide de hauteur : " + h + "\n");
-        for (int l = 1; l < h + 1; l++) {
-            for (int espace = 0; espace < h - l; espace++) {
+        for (int i = 1; i < h + 1; i++) {
+            for (int espace = 0; espace < h - i; espace++) {
                 System.out.print(" ");
             }
-            if (l != 1) {
+            if (i != 1) {
                 System.out.print("*");
             }
-            for (int etoile = 0; etoile < 2 * l - 3; etoile++) {
-                if (l == h) {
+            for (int etoile = 0; etoile < 2 * i - 3; etoile++) {
+                if (i == h) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
@@ -95,19 +95,21 @@ public class Exercice03 {
     public static void sapinCouche() throws Exception {
         int h = hauteurSapin();
         System.out.println("\nSapin couché de hauteur : " + h + "\n");
-        for (int l = 1; l < h + 2; l++) {
-            for (int etoile = 0; etoile < l - 1; etoile++) {
+        for (int i = 1; i < h + 2; i++) {
+            for (int etoile = 0; etoile < i - 1; etoile++) {
                 System.out.print("*");
             }
-            if (l > 1) {
+            if (i > 1) {
                 System.out.println("");
             }
         }
-        for (int l = h; l > 0; l--) {
-            for (int etoile = 0; etoile < l - 1; etoile++) {
+        for (int j = h; j > 0; j--) {
+            for (int etoile = 0; etoile < j - 1; etoile++) {
                 System.out.print("*");
             }
-            System.out.println("");
+            if (j != 1) {
+                System.out.println("");
+            }
         }
     }
 
